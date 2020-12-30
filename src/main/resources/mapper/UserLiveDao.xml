@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="site.wanjiahao.live.dao.UserLiveDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="site.wanjiahao.live.entity.UserLiveEntity" id="userLiveMap">
+        <result property="uid" column="uid"/>
+        <result property="lid" column="lid"/>
+    </resultMap>
+
+    <select id="listUserIdByLiveId" resultType="java.lang.String">
+        SELECT uid FROM `user_live` WHERE lid = #{id}
+    </select>
+
+
+</mapper>
